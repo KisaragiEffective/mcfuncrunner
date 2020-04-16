@@ -1,0 +1,21 @@
+name: McFuncRunner
+version: ${project.version}
+main: com.github.kisaragieffective.mcfuncrunner.McFuncRunner
+authors: [KisaragiEffective]
+description: Introduce /function command.
+website: https://github.com/KisaragiEffective/McFuncRunner
+
+permissions:
+  mcfuncrunner.*:
+    default: false
+    children:
+      mcfuncrunner.function: true
+      mcfuncrunner.exact_place: true
+  mcfuncrunner.function:
+    default: op
+  mcfuncrunner.exact_place:
+    default: op
+commands:
+  function:
+    permission: mcfuncrunner.function
+    usage: "/<command> [place: NameSpace]"
